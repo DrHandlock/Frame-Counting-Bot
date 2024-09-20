@@ -5,6 +5,7 @@ import praw
 from moviepy.editor import VideoFileClip
 from praw.exceptions import RedditAPIException
 from praw.exceptions import ClientException
+from prawcore.exceptions import ServerError
 import time
 import random
 
@@ -102,7 +103,7 @@ def frame_counting(video_path, promotion, flair):
     if promotion:
         result += " \n \n Check out r/REcountableFrame for a subreddit that is for people who want to count frames and this bot"
 
-    result += f"\n \n ^({event_number})"
+    result += f"\n \n ^({event_number}|[DrHandlock](https://www.reddit.com/user/DrHandlock/)|[github](https://github.com/DrHandlock/Frame-Counting-Bot))"
 
     return result
 
